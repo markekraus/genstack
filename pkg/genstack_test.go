@@ -31,24 +31,24 @@ func TestPop(t *testing.T) {
 	s.Push(true)
 	s.Push(false)
 	checkStackLen[bool](t, s, 4)
-	e := s.Pop()
+	e := *s.Pop()
 	checkStackLen[bool](t, s, 3)
-	if e.Value != false {
-		t.Errorf("e.Value = %v, want %v", e.Value, false)
+	if e != false {
+		t.Errorf("e = %v, want %v", e, false)
 	}
-	e = s.Pop()
+	e = *s.Pop()
 	checkStackLen[bool](t, s, 2)
-	if e.Value != true {
-		t.Errorf("e.Value = %v, want %v", e.Value, true)
+	if e != true {
+		t.Errorf("e = %v, want %v", e, true)
 	}
-	e = s.Pop()
+	e = *s.Pop()
 	checkStackLen[bool](t, s, 1)
-	if e.Value != false {
-		t.Errorf("e.Value = %v, want %v", e.Value, false)
+	if e != false {
+		t.Errorf("e = %v, want %v", e, false)
 	}
-	e = s.Pop()
+	e = *s.Pop()
 	checkStackLen[bool](t, s, 0)
-	if e.Value != true {
-		t.Errorf("e.Value = %v, want %v", e.Value, true)
+	if e != true {
+		t.Errorf("e = %v, want %v", e, true)
 	}
 }

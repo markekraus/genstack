@@ -53,13 +53,13 @@ func (s *Stack[T]) Push(v T) *Element[T] {
 }
 
 // Pop returns the next Element[T] e and removes it from Stack[T] s or nil if the stack is empty.
-func (s *Stack[T]) Pop() *Element[T] {
+func (s *Stack[T]) Pop() *T {
 	if s.len == 0 {
 		return nil
 	}
 	e := s.root.prev
 	s.remove(e)
-	return e
+	return &e.Value
 }
 
 // Len returns the number of elements of Stack[T] s.
