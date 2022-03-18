@@ -22,9 +22,9 @@ func main() {
     s.Push(90)
     fmt.Printf("elements: %v, want: %v\n", s.Len(), 3)
     for i := s.Len(); i > 0; i-- {
-        e := *s.Pop()
+        m := s.Pop()
         fmt.Printf("elements: %v, want: %v\n", s.Len(), i)
-        fmt.Printf("Value: %v\n", e)
+        fmt.Printf("Value: %v\n", m.Value)
     }
 }
 ```
