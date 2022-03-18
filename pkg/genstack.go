@@ -20,7 +20,7 @@ func (s *Stack[T]) lazyInit() {
 	}
 }
 
-// insert inserts e after at, increments l.len, and returns e.
+// insert inserts e after at, increments s.len, and returns e.
 func (s *Stack[T]) insert(e, at *Element[T]) *Element[T] {
 	e.prev = at
 	e.next = at.next
@@ -52,7 +52,7 @@ func (s *Stack[T]) Push(v T) *Element[T] {
 	return s.insertValue(v, s.root.prev)
 }
 
-// Push returns the next Element[T] and removes it from Stack[T] q or nil if the stack is empty.
+// Pop returns the next Element[T] e and removes it from Stack[T] s or nil if the stack is empty.
 func (s *Stack[T]) Pop() *Element[T] {
 	if s.len == 0 {
 		return nil
@@ -62,7 +62,7 @@ func (s *Stack[T]) Pop() *Element[T] {
 	return e
 }
 
-// Len returns the number of elements of Stack[T] q.
+// Len returns the number of elements of Stack[T] s.
 // The complexity is O(1).
 func (s *Stack[T]) Len() int { return s.len }
 
