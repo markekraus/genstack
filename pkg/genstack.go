@@ -66,7 +66,7 @@ func (s *Stack[T]) Pop() *Element[T] {
 // The complexity is O(1).
 func (s *Stack[T]) Len() int { return s.len }
 
-// Init initializes or clears list l.
+// Init initializes or clears stack s.
 func (s *Stack[T]) Init() *Stack[T] {
 	s.root.next = &s.root
 	s.root.prev = &s.root
@@ -74,7 +74,7 @@ func (s *Stack[T]) Init() *Stack[T] {
 	return s
 }
 
-// New returns an initialized list.
+// New returns an initialized stack.
 func New[T any]() *Stack[T] {
 	return new(Stack[T]).Init()
 }
