@@ -2,7 +2,18 @@
 
 A Generic Stack (FILO/LIFO) package for Go
 
+```bash
+ go get github.com/markekraus/genstack
+```
+
 ```go
+package main
+
+import (
+    "fmt"
+    genstack "github.com/markekraus/genstack/pkg"
+)
+
 func main() {
     s := genstack.New[int]()
     fmt.Printf("elements: %v, want: %v\n", s.Len(), 0)
