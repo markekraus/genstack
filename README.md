@@ -4,7 +4,7 @@ A Generic Stack (FILO/LIFO) package for Go
 
 ```go
 func main() {
-    s := s.New[int]()
+    s := genstack.New[int]()
     fmt.Printf("elements: %v, want: %v\n", s.Len(), 0)
     s.Push(3)
     s.Push(2)
