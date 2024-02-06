@@ -1,5 +1,7 @@
 # genstack
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/markekraus/genstack/pkg.svg)](https://pkg.go.dev/github.com/markekraus/genstack/pkg)
+
 A Generic Stack (FILO/LIFO) package for Go
 
 ```bash
